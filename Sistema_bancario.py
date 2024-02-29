@@ -29,7 +29,7 @@ while True:
         else: 
             saldo = (saldo + valor_deposito)
             print("Depósito feito com sucesso.")
-            lista_de_movimentacoes.append(f"Depósito de R$ {valor_deposito}")
+            lista_de_movimentacoes.insert(0,f"Depósito de R$ {valor_deposito}")
             
             
                     
@@ -52,7 +52,7 @@ while True:
             saldo = (saldo - valor_saque)
             print(f"Valor do saque: R$ {valor_saque}")
             numero_saques = numero_saques + 1
-            lista_de_movimentacoes.append(f"Saque de R$ {valor_saque}")
+            lista_de_movimentacoes.insert(0,f"Saque de R$ {valor_saque}")
             
         
                                                                
