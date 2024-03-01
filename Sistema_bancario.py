@@ -2,17 +2,17 @@ menu = '''
           MENU:
           
           [d] - Depositar
-          [s] - Sacar
+          [r] - Retirar
           [e] - Extrato
-          [S] - Saldo
+          [s] - Saldo
           [q] - Sair
         
 '''
 
 saldo = 0
 limite = 500
-numero_saques = 0
-LIMITE_SAQUES = 3
+numero_retiradas = 0
+LIMITE_RETIRADAS = 3
 lista_de_movimentacoes = []
 
 while True:
@@ -33,26 +33,26 @@ while True:
             
             
                     
-    elif opcao == "s":
-        print("Saque")
+    elif opcao == "r":
+        print("Retirar")
         
-        valor_saque = float(input("Informe o valor do saque:"))
-        saques = numero_saques >= LIMITE_SAQUES
+        valor_retirada = float(input("Informe o valor da retirada:"))
+        retiradas = numero_retiradas >= LIMITE_RETIRADAS
                 
-        if valor_saque > 500:
-                print("Não é possível sacar o dinheiro, limite de R$ 500.00")
+        if valor_retirada > 500:
+                print("Não é possível retirar o dinheiro, limite de R$ 500.00")
                 
-        elif valor_saque > saldo:
-                    print("Valor do saque superior ao saldo em conta.")
+        elif valor_retirada > saldo:
+                    print("Valor da retirada superior ao saldo em conta.")
                     
-        elif saques:
-                print("Limite de saques diários atingido.")
+        elif retiradas:
+                print("Limite de retiradas diárias atingido.")
                 
         else:
-            saldo = (saldo - valor_saque)
-            print(f"Valor do saque: R$ {valor_saque}")
-            numero_saques = numero_saques + 1
-            lista_de_movimentacoes.insert(0,f"Saque de R$ {valor_saque}")
+            saldo = (saldo - valor_retirada)
+            print(f"Valor da retirada: R$ {valor_retirada}")
+            numero_retiradas = numero_retiradas + 1
+            lista_de_movimentacoes.insert(0,f"Retirada de R$ {valor_retirada}")
             
         
                                                                
