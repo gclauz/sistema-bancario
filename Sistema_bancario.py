@@ -62,7 +62,7 @@ while True:
         print(lista_de_movimentacoes)
         
     
-    elif opcao == "S":
+    elif opcao == "s":
         print("Saldo")
         
         print(f"R$ {saldo}")
